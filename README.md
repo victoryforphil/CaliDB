@@ -31,6 +31,8 @@ DB.Set("no_spaces", {a:1,b:2,c:3});
 DB.Get("letterswork").then(function(data){
     //data = {a:1,b:2,c:3}
 })
+
+var Response = DB.GetSync("123") // Returns  {a:1,b:2,c:3}
 ```
 
 ## Config Values

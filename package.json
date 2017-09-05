@@ -1,6 +1,6 @@
 {
   "name": "cali-db",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A local and file based database.",
   "main": "index.js",
   "dependencies": {
