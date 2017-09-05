@@ -17,19 +17,24 @@ CaliDB uses an index file and sets of binary DB files. All the "raw" data is sto
 ## Example Code
 ```js   
 var CaliDB = require('calidb');
+
+var config ={
+    path:"./MyDb/"
+}
+
 var DB = new CaliDB(config);
 
-DB.Insert("123", {a:1,b:2,c:3});
-DB.Insert("letterswork", {a:1,b:2,c:3});
-DB.Insert("no_spaces", {a:1,b:2,c:3});
+DB.Set("123", {a:1,b:2,c:3});
+DB.Set("letterswork", {a:1,b:2,c:3});
+DB.Set("no_spaces", {a:1,b:2,c:3});
 
-DB.GetValue("letterswork").then(function(data){
+DB.Get("letterswork").then(function(data){
     //data = {a:1,b:2,c:3}
 })
 ```
 
 ## Config Values
-_Still under Construction_
+- `path` - Path to store DB information. *Must be unique if running multiple DB instances as this will define which datasource you want to recieve form*
 
 ## Docs
 _Stil Under Construction_
