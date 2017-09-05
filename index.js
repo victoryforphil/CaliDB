@@ -1,4 +1,5 @@
 var fs = require('fs');
+var mkdirp  = require('mkdirp');
 var BufferUtil = require("./src/bufferUtil")
 class CaliDB {
     constructor(config = {}) {
@@ -51,7 +52,7 @@ class CaliDB {
         try {
             fs.statSync(path)
         } catch (err) {
-            fs.mkdirSync(path)
+            mkdirp.sync(path)
             fs.writeFileSync(path + "index.db", "");
         }
     }
