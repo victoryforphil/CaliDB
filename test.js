@@ -2,9 +2,8 @@ var CaliDB = require('./index.js');
 var DLight = require('disnode-lite');
 
 var DB1 = new CaliDB({path:"./db/db-1/"});
-var DB2 = new CaliDB({path:"./db/b-2/"});
 
-DB1.Set("key1", "Value1");
-DB2.Set("key2", "Value12");
-
-console.log(DB2.GetSync("key2"));
+for (var index = 0; index < 10000; index++) {
+    DB1.Set(index +"key" , index * 10);
+    
+}

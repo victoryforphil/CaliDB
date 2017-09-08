@@ -8,7 +8,7 @@ class CaliDB {
         this.currentOffset = 0;
         this.index = {};
         this._pathCheck(this.path);
-        this.fd = fs.openSync(this.path + "data.db", 'a');
+        this.fd = fs.openSync(this.path + "data.db", 'r+');
 
     }
 
